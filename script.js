@@ -31,3 +31,13 @@ const age1=function(birthYear){
 const name1=age1(34)
 console.log(name1)
 
+//////////////// 35 Arrow function //////////////////////
+const person=(age,name)=>`${name}'s age is ${age}`
+const a=person(20,'Jon') 
+console.log(a)
+
+const person1=(age,name)=>{
+  return `${name}'s age is ${age}`;
+}
+const b = person1(34, "Bob");
+console.log(b);
