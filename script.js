@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // a= 3
 // console.log(a)
@@ -24,7 +24,6 @@
 //   return `Your age is ${birthYear}`
 // }
 
-
 // const age1=function(birthYear){
 //   return `Your age is ${birthYear}`
 // }
@@ -33,7 +32,7 @@
 
 // //////////////// 35 Arrow function //////////////////////
 // const person=(age,name)=>`${name}'s age is ${age}`
-// const a=person(20,'Jon') 
+// const a=person(20,'Jon')
 // console.log(a)
 
 // const person1=(age,name)=>{
@@ -105,25 +104,40 @@
 
 /////////////////// 40 Basic Array operations /////////////////
 
-const friends =['jamshid','shamshod','xurshid'];
+// const friends =['jamshid','shamshod','xurshid'];
 
-// add element
-friends.push('nodir')
-console.log(friends.push('qahramon'))
-console.log(friends)
-console.log(friends.unshift('olma'))
-console.log(friends)
-// remove elements
-console.log(friends.pop())
-console.log(friends.pop())
-console.log(friends.pop())
-console.log(friends)
-console.log(friends.shift())
-console.log(friends)
+// // add element
+// friends.push('nodir')
+// console.log(friends.push('qahramon'))
+// console.log(friends)
+// console.log(friends.unshift('olma'))
+// console.log(friends)
+// // remove elements
+// console.log(friends.pop())
+// console.log(friends.pop())
+// console.log(friends.pop())
+// console.log(friends)
+// console.log(friends.shift())
+// console.log(friends)
 
-console.log(friends.indexOf('jamshid'))
+// console.log(friends.indexOf('jamshid'))
 
-console.log(friends.includes('shamshod'))
-console.log(friends.includes('olma'))
+// console.log(friends.includes('shamshod'))
+// console.log(friends.includes('olma'))
 
+////////////////////// 41 coding challenge 2 /////////////////
 
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bill=[125,555,44]
+const tip=[calcTip(bill[0]),calcTip(bill[1]),calcTip(bill[2])]
+console.log(bill,tip)
+
+const newArrFunc=(bill,tip)=> new Array(bill,tip)
+const newArr = new Array(
+  newArrFunc(bill[0], tip[0]),
+  newArrFunc(bill[1], tip[1]),
+  newArrFunc(bill[2], tip[2])
+);
+console.log(newArr)
