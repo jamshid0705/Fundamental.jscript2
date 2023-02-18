@@ -62,19 +62,68 @@
 
 //////////////////// 37 coding challenge 1 /////////////////
 
-const calcAverage=(score1,score2,score3)=>(score1+score2+score3)/3
+// const calcAverage=(score1,score2,score3)=>(score1+score2+score3)/3
 
-function checkWinner(data1,data2,data3,data4,data5,data6){
-  const avgDolhins=calcAverage(data1,data2,data3)
-  const avgKoalas=calcAverage(data4,data5,data6)
-  if(avgDolhins>=2*avgKoalas){
-    return `Dolhins win🎉 (${avgDolhins} vs ${avgKoalas})`
-  }else if(avgDolhins*2<=avgKoalas){
-    return `Koalas win🎉 (${avgKoalas} vs ${avgDolhins})`;
-  } else{
-    return `Ohterwise no team wins ! (Koalas ${avgKoalas} vs Dolhins ${avgDolhins})`;
-  }
-}
+// function checkWinner(data1,data2,data3,data4,data5,data6){
+//   const avgDolhins=calcAverage(data1,data2,data3)
+//   const avgKoalas=calcAverage(data4,data5,data6)
+//   if(avgDolhins>=2*avgKoalas){
+//     return `Dolhins win🎉 (${avgDolhins} vs ${avgKoalas})`
+//   }else if(avgDolhins*2<=avgKoalas){
+//     return `Koalas win🎉 (${avgKoalas} vs ${avgDolhins})`;
+//   } else{
+//     return `Ohterwise no team wins ! (Koalas ${avgKoalas} vs Dolhins ${avgDolhins})`;
+//   }
+// }
 
-console.log(checkWinner(44,23,71,65,54,49))
-console.log(checkWinner(85,54,41,23,34,27))
+// console.log(checkWinner(44,23,71,65,54,49))
+// console.log(checkWinner(85,54,41,23,34,27))
+
+/////////////////// 38 introduction to Arrays ////////////////
+// const friends =['jamshid','shamshod','xurshid'];
+// const years=new Array(2000,2005,1998)
+// console.log(friends,years)
+
+// console.log(friends.length)
+// console.log(friends[friends.length-3])
+
+// const arr=[34+9,"olma",34>9?'onasi':'bolasi',friends]
+// console.log(arr)
+// // console.log(typeof undefined/3)
+// // let a='2'
+// // console.log(a-6)
+
+// // console.log(h)
+// // var h=4
+
+// const age=function(years){
+//   return 2023-years
+// }
+
+// const newArray=new Array(age(years[0]),age(years[2]),age(years[1]))
+// console.log(newArray)
+
+/////////////////// 40 Basic Array operations /////////////////
+
+const friends =['jamshid','shamshod','xurshid'];
+
+// add element
+friends.push('nodir')
+console.log(friends.push('qahramon'))
+console.log(friends)
+console.log(friends.unshift('olma'))
+console.log(friends)
+// remove elements
+console.log(friends.pop())
+console.log(friends.pop())
+console.log(friends.pop())
+console.log(friends)
+console.log(friends.shift())
+console.log(friends)
+
+console.log(friends.indexOf('jamshid'))
+
+console.log(friends.includes('shamshod'))
+console.log(friends.includes('olma'))
+
+
