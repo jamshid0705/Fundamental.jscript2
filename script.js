@@ -127,17 +127,78 @@
 
 ////////////////////// 41 coding challenge 2 /////////////////
 
-const calcTip = (bill) =>
-  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) =>
+//   bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-const bill=[125,555,44]
-const tip=[calcTip(bill[0]),calcTip(bill[1]),calcTip(bill[2])]
-console.log(bill,tip)
+// const bill=[125,555,44]
+// const tip=[calcTip(bill[0]),calcTip(bill[1]),calcTip(bill[2])]
+// console.log(bill,tip)
 
-const newArrFunc=(bill,tip)=> new Array(bill,tip)
-const newArr = new Array(
-  newArrFunc(bill[0], tip[0]),
-  newArrFunc(bill[1], tip[1]),
-  newArrFunc(bill[2], tip[2])
+// const newArrFunc=(bill,tip)=> new Array(bill,tip)
+// const newArr = new Array(
+//   newArrFunc(bill[0], tip[0]),
+//   newArrFunc(bill[1], tip[1]),
+//   newArrFunc(bill[2], tip[2])
+// );
+// console.log(newArr)
+
+////////////////////// 42 object //////////////
+
+// const arr=[
+//   'jamshid',
+//   'xatamov',
+//   2023-2000,
+//   'programmer'
+// ]
+
+// const obj={
+//   firstname:'jamshid',
+//   lastname:'xatamov',
+//   age:2023-2000,
+//   job:'programmer',
+//   friends : ["jamshid", "shamshod", "xurshid"]
+// }
+
+// console.log(arr)
+// console.log(obj)
+
+/////////////////// 43 dot and . bracket notation //////////////
+const obj = {
+  firstname: "jamshid",
+  lastname: "xatamov",
+  age: 2023 - 2000,
+  job: "programmer",
+  friends: ["jamshid", "shamshod", "xurshid"],
+};
+
+console.log(obj.lastname);
+console.log(obj["age"]);
+
+const interestedIn = prompt(
+  "What do you want to know about Jamshid ? Choose between firstname, lastname, age, job, friends"
 );
-console.log(newArr)
+
+obj.location = "Tashkent";
+obj["email"] = "jamshid0705@gmail.com";
+console.log(obj);
+
+if (obj[interestedIn]) {
+  console.log(obj[interestedIn]);
+} else {
+  console.log(
+    "Wrong request ! Choose between firstname, lastname, age, job, friends"
+  );
+}
+
+
+console.log(`${obj.firstname} has got ${obj.friends.length} friends and his best friend is called ${obj.friends[1]}`)
+
+
+// const arr=[
+//   'jamshid',
+//   'xatamov',
+//   2023-2000,
+//   'programmer'
+// ]
+// const newArr=new Array(...arr,'olma')
+// console.log(newArr)
