@@ -263,34 +263,91 @@
 
 ///////////////// 47 loops array //////////////
 
-const arr = [
-  "jamshid",
-  "xatamov",
-  2023 - 2000,
-  "programmer",
-  ["jamshid", "shamshod", "xurshid"],
-];
+// const arr = [
+//   "jamshid",
+//   "xatamov",
+//   2023 - 2000,
+//   "programmer",
+//   ["jamshid", "shamshod", "xurshid"],
+// ];
 
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i], typeof arr[i]);
-}
-// continue and break
-console.log('---Continue---')
-for (let i = 0; i < arr.length; i++) {
-  if(typeof arr[i] !=='string') continue;
-  console.log(arr[i], typeof arr[i])
-}
-console.log('---Break---')
-for (let i = 0; i < arr.length; i++) {
-  if (typeof arr[i] == "number") break;
-  console.log(arr[i], typeof arr[i]);
-}
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i], typeof arr[i]);
+// }
+// // continue and break
+// console.log('---Continue---')
+// for (let i = 0; i < arr.length; i++) {
+//   if(typeof arr[i] !=='string') continue;
+//   console.log(arr[i], typeof arr[i])
+// }
+// console.log('---Break---')
+// for (let i = 0; i < arr.length; i++) {
+//   if (typeof arr[i] == "number") break;
+//   console.log(arr[i], typeof arr[i]);
+// }
 
-// challenge
-const years = [1998, 1988, 1999, 2000, 2003];
-const emptyArr = [];
-for (let i = 0; i < years.length; i++) {
-  // emptyArr.push(2023-years[i])
-  emptyArr[i] = 2023 - years[i];
+// // challenge
+// const years = [1998, 1988, 1999, 2000, 2003];
+// const emptyArr = [];
+// for (let i = 0; i < years.length; i++) {
+//   // emptyArr.push(2023-years[i])
+//   emptyArr[i] = 2023 - years[i];
+// }
+// console.log(emptyArr);
+
+/////////////// 48 Looping backward and looping in looping /////////////
+// const arr = [
+//   "jamshid",
+//   "xatamov",
+//   2023 - 2000,
+//   "programmer",
+//   ["olma", "nok", "shaftoli"],
+// ];
+
+// for (let i=arr.length-1;i>=0;i--){
+//   console.log(arr[i])
+//   if(typeof arr[i]==='object'){
+//     for(let j=0;j<arr[i].length;j++){
+//       console.log(arr[i][j])
+//     }
+//   }
+// }
+
+// //////////////// 49 while loop ////////////////////
+
+// let team = 1;
+// while (team <= 6) {
+//   console.log(`${team}-team`);
+//   team++;
+// }
+
+// let random = Math.trunc(Math.random() * 5) + 1;
+// console.log(random);
+// while (random !== 5) {
+//   console.log(random);
+//   random = Math.trunc(Math.random() * 5) + 1;
+// }
+
+//////////////////// 50 coding challenge ////////////
+
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+for (let i = 0; i < bill.length; i++) {
+  tips.push(calcTip(bill[i]));
+  total.push(bill[i] + calcTip(bill[i]));
 }
-console.log(emptyArr);
+console.log(tips);
+console.log(total);
+
+const calsAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calsAverage(total));
