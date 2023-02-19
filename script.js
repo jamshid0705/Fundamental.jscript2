@@ -163,36 +163,34 @@
 // console.log(obj)
 
 /////////////////// 43 dot and . bracket notation //////////////
-const obj = {
-  firstname: "jamshid",
-  lastname: "xatamov",
-  age: 2023 - 2000,
-  job: "programmer",
-  friends: ["jamshid", "shamshod", "xurshid"],
-};
+// const obj = {
+//   firstname: "jamshid",
+//   lastname: "xatamov",
+//   age: 2023 - 2000,
+//   job: "programmer",
+//   friends: ["jamshid", "shamshod", "xurshid"],
+// };
 
-console.log(obj.lastname);
-console.log(obj["age"]);
+// console.log(obj.lastname);
+// console.log(obj["age"]);
 
-const interestedIn = prompt(
-  "What do you want to know about Jamshid ? Choose between firstname, lastname, age, job, friends"
-);
+// const interestedIn = prompt(
+//   "What do you want to know about Jamshid ? Choose between firstname, lastname, age, job, friends"
+// );
 
-obj.location = "Tashkent";
-obj["email"] = "jamshid0705@gmail.com";
-console.log(obj);
+// obj.location = "Tashkent";
+// obj["email"] = "jamshid0705@gmail.com";
+// console.log(obj);
 
-if (obj[interestedIn]) {
-  console.log(obj[interestedIn]);
-} else {
-  console.log(
-    "Wrong request ! Choose between firstname, lastname, age, job, friends"
-  );
-}
+// if (obj[interestedIn]) {
+//   console.log(obj[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request ! Choose between firstname, lastname, age, job, friends"
+//   );
+// }
 
-
-console.log(`${obj.firstname} has got ${obj.friends.length} friends and his best friend is called ${obj.friends[1]}`)
-
+// console.log(`${obj.firstname} has got ${obj.friends.length} friends and his best friend is called ${obj.friends[1]}`)
 
 // const arr=[
 //   'jamshid',
@@ -202,3 +200,56 @@ console.log(`${obj.firstname} has got ${obj.friends.length} friends and his best
 // ]
 // const newArr=new Array(...arr,'olma')
 // console.log(newArr)
+////////////////////////////// 44 object methods ////////////////
+
+// const obj = {
+//   firstname: "jamshid",
+//   lastname: "xatamov",
+//   birthYear: 2000,
+//   job: "programmer",
+//   friends: ["jamshid", "shamshod", "xurshid"],
+//   hasDriverLicense: false,
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age;
+//   },
+// };
+// console.log(obj);
+// console.log(obj.calcAge());
+// // console.log(obj)
+// // console.log(obj['calcAge']());
+// console.log(
+//   `${obj.firstname} is a ${obj.calcAge()} years old. He has ${
+//     obj.hasDriverLicense === true ? "a" : "not a"
+//   } driver's license !`
+// );
+
+/////////////////////////// 45 coding challenge 3 ///////////////
+const mark = {
+  fullname: "Mark",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    return this.mass / this.height ** 2;
+  },
+};
+
+const john = {
+  fullname: "John",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    return this.mass / this.height ** 2;
+  },
+};
+
+const result =
+  mark.calcBMI() > john.calcBMI()
+    ? `${mark.fullname}'s BMI (${mark.calcBMI()}) is higher than ${
+        john.fullname
+      }'s BMI (${john.calcBMI()}) !`
+    : `${john.fullname}'s BMI (${john.calcBMI()}) is higher than ${
+        mark.fullname
+      }'s BMI (${mark.calcBMI()}) !`;
+
+console.log(result)
