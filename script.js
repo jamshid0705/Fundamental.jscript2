@@ -214,8 +214,10 @@
 //     return this.age;
 //   },
 // };
-// console.log(obj);
+
 // console.log(obj.calcAge());
+// console.log(JSON.stringify(obj));
+// console.log(typeof obj)
 // // console.log(obj)
 // // console.log(obj['calcAge']());
 // console.log(
@@ -225,31 +227,70 @@
 // );
 
 /////////////////////////// 45 coding challenge 3 ///////////////
-const mark = {
-  fullname: "Mark",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    return this.mass / this.height ** 2;
-  },
-};
+// const mark = {
+//   fullname: "Mark",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
 
-const john = {
-  fullname: "John",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    return this.mass / this.height ** 2;
-  },
-};
+// const john = {
+//   fullname: "John",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
 
-const result =
-  mark.calcBMI() > john.calcBMI()
-    ? `${mark.fullname}'s BMI (${mark.calcBMI()}) is higher than ${
-        john.fullname
-      }'s BMI (${john.calcBMI()}) !`
-    : `${john.fullname}'s BMI (${john.calcBMI()}) is higher than ${
-        mark.fullname
-      }'s BMI (${mark.calcBMI()}) !`;
+// const result =
+//   mark.calcBMI() > john.calcBMI()
+//     ? `${mark.fullname}'s BMI (${mark.calcBMI()}) is higher than ${
+//         john.fullname
+//       }'s BMI (${john.calcBMI()}) !`
+//     : `${john.fullname}'s BMI (${john.calcBMI()}) is higher than ${
+//         mark.fullname
+//       }'s BMI (${mark.calcBMI()}) !`;
 
-console.log(result)
+// console.log(result)
+
+///////////////// 46 for loop //////////////////
+// for (let i=1;i<=10;i++){
+//   console.log(`${i}- team !`)
+// }
+
+///////////////// 47 loops array //////////////
+
+const arr = [
+  "jamshid",
+  "xatamov",
+  2023 - 2000,
+  "programmer",
+  ["jamshid", "shamshod", "xurshid"],
+];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i], typeof arr[i]);
+}
+// continue and break
+console.log('---Continue---')
+for (let i = 0; i < arr.length; i++) {
+  if(typeof arr[i] !=='string') continue;
+  console.log(arr[i], typeof arr[i])
+}
+console.log('---Break---')
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] == "number") break;
+  console.log(arr[i], typeof arr[i]);
+}
+
+// challenge
+const years = [1998, 1988, 1999, 2000, 2003];
+const emptyArr = [];
+for (let i = 0; i < years.length; i++) {
+  // emptyArr.push(2023-years[i])
+  emptyArr[i] = 2023 - years[i];
+}
+console.log(emptyArr);
